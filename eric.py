@@ -3,6 +3,7 @@ from requests import get
 from time import sleep
 from selenium import webdriver
 from dateutil import parser
+import pdb
 
 test = """
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs"><head><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.vapb4E2BnWs.O/m=auth/exm=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCOY6I79W2gOngQhoBDIFvlI0EnkcA/cb=gapi.loaded_1" async=""></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.vapb4E2BnWs.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCOY6I79W2gOngQhoBDIFvlI0EnkcA/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="http://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://apis.google.com/js/plusone.js" gapi_processed="true"></script><script id="facebook-jssdk" async="" src="//connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=393736670647047"></script>
@@ -1453,6 +1454,7 @@ class Collect():
 
             
             #html = self._get_tournament_table_html(url)  ### UNCOMMENT ME TO RUN SCRAPER
+            pdb.set_trace()
             html = test ### COMMENT ME OUT
             page_data = self._parse_tournament_table_html(html,url)
 
